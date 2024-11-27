@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #0d1117; /* Dark background */
+    color: #c9d1d9; /* Light text */
+}
+
+/* Full screen background */
+.background {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #010409; /* Slightly lighter dark for contrast */
+}
+
+/* Contact form container */
+.contact-form {
+    width: 420px;
+    padding: 25px;
+    background-color: #161b22; /* Darker card background */
+    border: 1px solid #30363d; /* Subtle border */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-form:hover {
+    transform: scale(1.02);
+}
+
+.contact-form h2 {
+    text-align: center;
+    color: #58a6ff; /* Vibrant blue for headings */
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.contact-form p {
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 25px;
+    color: #8b949e; /* Softer light gray for subtitles */
+}
+
+/* Form labels and inputs */
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #c9d1d9;
+}
+
+.contact-form input, 
+.contact-form select, 
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #30363d;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-size: 14px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border-color: #58a6ff; /* Blue accent on focus */
+    box-shadow: 0 0 8px rgba(88, 166, 255, 0.4);
+    outline: none;
+}
+
+.contact-form select {
+    font-size: 14px;
+    background-color: #0d1117;
+}
+
+/* Textarea styling */
+.contact-form textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+/* Submit button */
+.contact-form button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #238636; /* Vibrant green for buttons */
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(35, 134, 54, 0.4);
+    transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #2ea043; /* Slightly brighter green on hover */
+    box-shadow: 0 8px 20px rgba(46, 160, 67, 0.6);
+}
+
+/* Close button for the form */
+.contact-form .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    color: #8b949e; /* Light gray */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.contact-form .close-btn:hover {
+    color: #58a6ff; /* Blue on hover */
+}
+
+</style>
+</head>
+<body>
+    <div class="background">
+        <div class="contact-form">
+            <span class="close-btn">&times;</span>
+            <h2>Contact Us</h2>
+            <p>We would love to hear from you! Fill out the form below:</p>
+            <form id="contactForm">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject" required>
+                    <option value="" disabled selected>Select a subject</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="support">Support</option>
+                    <option value="feedback">Feedback</option>
+                </select>
+                
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <script>
+// Handle the close button
+document.querySelector('.close-btn').addEventListener('click', () => {
+    document.querySelector('.contact-form').style.display = 'none';
+});
+
+// Handle form submission
+document.getElementById('contactForm').addEventListener('submit', (event) => {
+    event.preventDefault();
+    alert('Thank you! Your message has been sent.');
+    document.getElementById('contactForm').reset(); // Clear the form
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price List with Images</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        /* Base Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0d1117; /* GitHub dark theme */
+            color: #c9d1d9;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 50px 20px;
+            color: #58a6ff;
+        }
+
+        .header h1 {
+            font-size: 50px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .header p {
+            font-size: 20px;
+        }
+
+        /* Price List Table */
+        .price-list {
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+            border-collapse: collapse;
+            border: 1px solid #333;
+        }
+
+        .price-list th,
+        .price-list td {
+            border: 1px solid #333;
+            padding: 15px;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        .price-list th {
+            background-color: #161b22;
+            color: #58a6ff;
+        }
+
+        .price-list tr:hover {
+            background-color: #21262d;
+            transition: background-color 0.3s ease;
+        }
+
+        .price-list td {
+            color: #c9d1d9;
+        }
+
+        .price-list img {
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Buttons */
+        .action-buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .action-buttons button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #58a6ff;
+            color: #0d1117;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            margin: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .action-buttons button:hover {
+            background-color: #0366d6;
+            transform: scale(1.1);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Price List</h1>
+        <p>Explore our competitive pricing for the latest car models</p>
+    </div>
+
+    <!-- Price List Table -->
+    <table class="price-list">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Model</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="C:\Users\DELL\Desktop\lingscar\1.jfif" alt="Model X"></td>
+                <td>Model X</td>
+                <td>Electric SUV with futuristic design</td>
+                <td>$80,000</td>
+                <td><button>Order</button></td>
+            </tr>
+            <tr>
+                <td><img src="C:\Users\DELL\Desktop\lingscar\2.jfif" alt="Model S"></td>
+                <td>Model S</td>
+                <td>Luxury sedan with exceptional range</td>
+                <td>$70,000</td>
+                <td><button>Order</button></td>
+            </tr>
+            <tr>
+                <td><img src="C:\Users\DELL\Desktop\lingscar\3.jfif" alt="Model 3"></td>
+                <td>Model 3</td>
+                <td>Affordable electric sedan</td>
+                <td>$40,000</td>
+                <td><button>Order</button></td>
+            </tr>
+            <tr>
+                <td><img src="C:\Users\DELL\Desktop\lingscar\4.jfif" alt="Model Y"></td>
+                <td>Model Y</td>
+                <td>Compact electric SUV</td>
+                <td>$50,000</td>
+                <td><button>Order</button></td>
+            </tr>
+            <tr>
+                <td><img src="C:\Users\DELL\Desktop\lingscar\5.jfif" alt="Cybertruck"></td>
+                <td>Cybertruck</td>
+                <td>All-electric pickup truck</td>
+                <td>$60,000</td>
+                <td><button>Order</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+        <button onclick="goHome()">Home</button>
+        <button onclick="contactUs()">Contact Us</button>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Navigation Buttons
+        function goHome() {
+            alert("Redirecting to Home Page...");
+            // Implement redirection logic
+        }
+
+        function contactUs() {
+            alert("Redirecting to Contact Us Page...");
+            // Implement redirection logic
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - Lingscar</title>
+    <style>
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212; /* Dark theme background */
+    color: #e0e0e0; /* Light text */
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+header {
+    text-align: center;
+    margin: 30px 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #bb86fc; /* Accent color */
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #b0b0b0; /* Softer text color */
+    margin-top: 10px;
+}
+
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.feature-card {
+    background-color: #1f1f1f; /* Card background */
+    border: 1px solid #323232; /* Subtle border */
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    background-color: #292929; /* Slightly lighter on hover */
+    border-color: #bb86fc; /* Accent border on hover */
+}
+
+.feature-card h3 {
+    color: #bb86fc; /* Accent color for titles */
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.feature-card p {
+    color: #b0b0b0; /* Softer text color for descriptions */
+    font-size: 1rem;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #323232;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #b0b0b0;
+}
+
+</style>
+</head>
+<body>
+    <header class="header">
+        <h1>Lingscar Features</h1>
+        <p>Discover what makes Lingscar the ultimate car leasing platform.</p>
+    </header>
+
+    <main class="features-container">
+        <div class="feature-card">
+            <h3>Transparent Pricing</h3>
+            <p>Enjoy complete transparency with no hidden charges or surprises.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Extensive Model Range</h3>
+            <p>Find vehicles for every need, from economy cars to luxury SUVs.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Flexible Leasing Options</h3>
+            <p>Choose a plan that fits your budget and lifestyle with ease.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Personalized Recommendations</h3>
+            <p>Get tailored suggestions based on your preferences and needs.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Eco-Friendly Choices</h3>
+            <p>Leasing options include electric and hybrid vehicles to reduce your carbon footprint.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Advanced Safety Features</h3>
+            <p>Access vehicles equipped with the latest safety technologies for peace of mind.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Fast Delivery</h3>
+            <p>Receive your chosen vehicle quickly with our efficient delivery process.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Comprehensive Support</h3>
+            <p>Our team is available to assist you at every step, 24/7.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Lingscar. All rights reserved.</p>
+    </footer>
+<script>
+// Add event listeners to feature cards for additional interactivity
+document.querySelectorAll('.feature-card').forEach(card => {
+    card.addEventListener('mouseover', () => {
+        card.style.transform = 'translateY(-15px) scale(1.05)';
+    });
+
+    card.addEventListener('mouseout', () => {
+        card.style.transform = 'translateY(0) scale(1)';
+    });
+});
+
+</script>
+</body>
+</html>

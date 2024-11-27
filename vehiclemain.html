@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lings Car</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+/* Base Styles */
+body {
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #1e1e2f; /* Dark theme background */
+    color: #f5f5f7; /* Light text */
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 50px 20px;
+    color: #ffa500; /* Bright orange */
+    background: linear-gradient(135deg, #2b2b3c, #3e3e50); /* Dark gradient */
+    border-bottom: 4px solid #ff6347; /* Tomato border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.header h1 {
+    font-size: 50px;
+    text-shadow: 3px 3px #000; /* Black shadow */
+    animation: bounceIn 1.5s ease-in-out infinite alternate;
+}
+
+.header p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #a9a9b3; /* Subtle gray */
+}
+
+.header img {
+    display: inline-block;
+    margin: 10px;
+    width: 150px; /* Increased GIF size */
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Individual Card */
+.card {
+    background-color: #2b2b3c; /* Dark card background */
+    border: 2px solid #ffa500; /* Bright orange border */
+    border-radius: 12px;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.card:hover {
+    transform: rotate(-3deg) translateY(-10px); /* Tilt and float effect */
+    box-shadow: 0 10px 25px rgba(255, 165, 0, 0.3);
+}
+
+/* Card Header */
+.card h3 {
+    font-size: 22px;
+    color: #ffa500; /* Bright orange */
+    margin-bottom: 10px;
+}
+
+/* Card Content */
+.card p {
+    font-size: 16px;
+    color: #f5f5f7;
+}
+
+/* Card Button */
+.card a {
+    display: inline-block;
+    padding: 12px 25px;
+    border: none;
+    background-color: #ffa500; /* Bright orange */
+    color: #1e1e2f; /* Dark button text */
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.card a:hover {
+    background-color: #ff6347; /* Tomato */
+}
+
+/* Animations */
+@keyframes bounceIn {
+    0% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to Lingscar</h1>
+        <p>Explore our features and services</p>
+        <img src="C:\Users\DELL\Desktop\lingscar\lc.png" alt="Funny Emoji GIF">
+        <img src="C:\Users\DELL\Desktop\lingscar\lg.gif" alt="Funny GIF 2">
+        <img src="C:\Users\DELL\Desktop\lingscar\ld.jpg" alt="Funny GIF 3">
+    </div>
+
+    <div class="card-container" id="cardContainer">
+        <!-- Cards will be dynamically added here -->
+    </div>
+
+    <script>
+        // JavaScript for Dynamic Card Creation
+        const cardData = [
+            {
+                title: "Sign In",
+                description: "Access your account to manage your preferences.",
+                buttonText: "Sign In",
+                link: "file:///C:/Users/DELL/Desktop/lingscar/signin.html", // Link for the "Sign In" page
+            },
+            {
+                title: "Price List",
+                description: "Browse the latest prices for our models.",
+                buttonText: "View Prices",
+                link: "file:///C:/Users/DELL/Desktop/lingscar/vehicleprice.html", // Link for the "Price List" page
+            },
+            {
+                title: "Model Search",
+                description: "Find your ideal car from our extensive catalog.",
+                buttonText: "Search Now",
+                link: "file:///C:/Users/DELL/Desktop/lingscar/lingmodel.html", // Link for the "Model Search" page
+            },
+            {
+                title: "Contact Us",
+                description: "Contact for any Enquery.",
+                buttonText: "Contact Now",
+                link: "file:///C:/Users/DELL/Desktop/lingscar/contactus.html", // Link for the "Order" page
+            },
+            {
+                title: "Fun Stuff",
+                description: "Discover entertaining and interactive content.",
+                buttonText: "Explore",
+                link: "https://poki.com/", // Link for the "Fun Stuff" page
+            },
+            {
+                title: "Features",
+                description: "Learn about the top features we offer.",
+                buttonText: "Learn More",
+                link: "file:///C:/Users/DELL/Desktop/lingscar/lingfeature.html", // Link for the "Features" page
+            },
+            {
+                title: "About",
+                description: "Get to know more about us and our mission.",
+                buttonText: "Read More",
+                link: "file:///C:/Users/DELL/Desktop/lingscar/lingabout.html", // Link for the "About" page
+            },
+        ];
+
+        const cardContainer = document.getElementById("cardContainer");
+
+        // Add cards dynamically
+        cardData.forEach((card) => {
+            const cardElement = document.createElement("div");
+            cardElement.classList.add("card");
+            cardElement.innerHTML = `
+                <h3>${card.title}</h3>
+                <p>${card.description}</p>
+                <a href="${card.link}">${card.buttonText}</a>
+            `;
+            cardContainer.appendChild(cardElement);
+        });
+    </script>
+</body>
+</html>

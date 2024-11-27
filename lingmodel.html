@@ -1,0 +1,268 @@
+<html>
+ <head>
+  <title>
+   Car Listings
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            margin: 20px auto;
+        }
+        .section {
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .section h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid #333;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: 500;
+            color: #e0e0e0;
+        }
+        .tab.active {
+            border-bottom: 2px solid #ff5722;
+            color: #ff5722;
+        }
+        .card-container {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+        }
+        .card {
+            background-color: #2c2c2c;
+            border: 1px solid #333;
+            border-radius: 10px;
+            width: 250px;
+            flex-shrink: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .card img {
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .card-content {
+            padding: 15px;
+        }
+        .card-content h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .card-content p {
+            font-size: 16px;
+            color: #b0b0b0;
+            margin: 5px 0;
+        }
+        .card-content button {
+            background-color: #2c2c2c;
+            border: 1px solid #ff5722;
+            color: #ff5722;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .card-content button:hover {
+            background-color: #ff5722;
+            color: #fff;
+        }
+        .view-all {
+            text-align: right;
+            margin-top: 10px;
+        }
+        .view-all a {
+            color: #ff5722;
+            text-decoration: none;
+            font-weight: 500;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="section">
+    <h2>
+     The most searched cars
+    </h2>
+    <div class="tabs">
+     <div class="tab active">
+      SUV
+     </div>
+     <div class="tab">
+      Hatchback
+     </div>
+     <div class="tab">
+      Sedan
+     </div>
+     <div class="tab">
+      MUV
+     </div>
+     <div class="tab">
+      Luxury
+     </div>
+    </div>
+    <div class="card-container">
+     <div class="card">
+      <img alt="Mahindra Scorpio" height="150" src="https://storage.googleapis.com/a1aa/image/1ZFoefaUsUplE0CZvUr1dJYZu5wkxsE4NaaZ8OeF2NcZfdUPB.jpg" width="250"/>
+      <div class="card-content">
+       <h3>
+        Mahindra Scorpio
+       </h3>
+       <p>
+        ₹ 13.62 - 17.42 Lakh*
+       </p>
+       <button>
+        Check November Offers
+       </button>
+      </div>
+     </div>
+     <div class="card">
+      <img alt="Mahindra Thar" height="150" src="https://storage.googleapis.com/a1aa/image/QAgCL9j0OcpsKFuXRoCbAKuQ7j1g7WT1RiaCrvaqGdn53R9E.jpg" width="250"/>
+      <div class="card-content">
+       <h3>
+        Mahindra Thar
+       </h3>
+       <p>
+        ₹ 11.35 - 17.60 Lakh*
+       </p>
+       <button>
+        Check November Offers
+       </button>
+      </div>
+     </div>
+     <div class="card">
+      <img alt="Skoda Kylag" height="150" src="https://storage.googleapis.com/a1aa/image/5Yrhql6wqUKOHFInEtGUSXyjxXBavaA5P2xD1fpJuSH0vj6JA.jpg" width="250"/>
+      <div class="card-content">
+       <h3>
+        Skoda Kylag
+       </h3>
+       <p>
+        ₹ 7.89 Lakh*
+       </p>
+       <button>
+        I Am Interested
+       </button>
+      </div>
+     </div>
+     <div class="card">
+      <img alt="Hyundai Creta" height="150" src="https://storage.googleapis.com/a1aa/image/j4LMVW0CAcJFGZ70snMUYgEvnheu6ctXp2Ji9krqhmzxvj6JA.jpg" width="250"/>
+      <div class="card-content">
+       <h3>
+        Hyundai Creta
+       </h3>
+       <p>
+        ₹ 11 - 20.30 Lakh*
+       </p>
+       <button>
+        Check November Offers
+       </button>
+      </div>
+     </div>
+    </div>
+    <div class="view-all">
+     <a href="#">
+      View All SUV Cars
+      <i class="fas fa-chevron-right">
+      </i>
+     </a>
+    </div>
+   </div>
+   <div class="section">
+    <h2>
+     Recommended Used Cars For You
+    </h2>
+    <div class="card-container">
+     <div class="card">
+      <img alt="2024 Kia Seltos GTX Plus Turbo DCT" height="150" src="https://storage.googleapis.com/a1aa/image/o9TDaoDav3YxL9IMDXHvObe03Wsl1dkXAccImD3TSeAqfOqnA.jpg" width="250"/>
+      <div class="card-content">
+       <h3>
+        2024 Kia Seltos GTX Plus Turbo DCT
+       </h3>
+       <p>
+        ₹ 20.00 Lakh
+       </p>
+       <p>
+        6,000 Km • Petrol • New Delhi
+       </p>
+       <button>
+        View Seller Details
+       </button>
+      </div>
+     </div>
+     <div class="card">
+      <img alt="2019 Hyundai Creta 1.6 VTVT SX Plus" height="150" src="https://storage.googleapis.com/a1aa/image/9yXh150j6LqkPFRDVcx79XCzIx90GAdCSfNKIowBuoeufOqnA.jpg" width="250"/>
+      <div class="card-content">
+       <h3>
+        2019 Hyundai Creta 1.6 VTVT SX Plus
+       </h3>
+       <p>
+        ₹ 10.25 Lakh
+       </p>
+       <p>
+        41,000 Km • Petrol • New Delhi
+       </p>
+       <button>
+        View Seller Details
+       </button>
+      </div>
+     </div>
+     <div class="card">
+      <img alt="2021 Hyundai Grand i10 Nios Magna" height="150" src="https://storage.googleapis.com/a1aa/image/IKagAMlbJzIgBBnCnAgXbOHHka9XvpeYfiocp4Nix8ktfOqnA.jpg" width="250"/>
+      <div class="card-content">
+       <h3>
+        2021 Hyundai Grand i10 Nios Magna
+       </h3>
+       <p>
+        ₹ 6.50 Lakh
+       </p>
+       <p>
+        9,000 Km • Petrol • New Delhi
+       </p>
+       <button>
+        View Seller Details
+       </button>
+      </div>
+     </div>
+     <div class="card">
+      <img alt="2019 Maruti Ciaz Alpha" height="150" src="https://storage.googleapis.com/a1aa/image/YoCzXRxBRqJDFBtvGsTDLdQrqxxczRWe0mjotgVwHmzyvj6JA.jpg" width="250"/>
+      <div class="card-content">
+       <h3>
+        2019 Maruti Ciaz Alpha
+       </h3>
+       <p>
+        ₹ 8.00 Lakh
+       </p>
+       <p>
+        29,000 Km • Petrol • New Delhi
+       </p>
+       <button>
+        View Seller Details
+       </button>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
